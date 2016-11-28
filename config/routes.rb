@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
   get 'carts/show'
 
-  get "app/views/trees", to: "trees#about", as: "about"
+  get "about", to: "trees#about", as: "about"
+
+  get "checkout", to: "trees#checkout", as: "checkout"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -22,5 +24,6 @@ Rails.application.routes.draw do
   resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
   resources :transactions, only: [:new, :create]
+  resources :charges
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

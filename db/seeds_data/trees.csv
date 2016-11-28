@@ -1,0 +1,11 @@
+name,description,height,width,price,image_url,category_id,active
+Amur Flame Maple,Small Maple,15,15,99.99,flamemaple.jpg,2,TRUE
+Colorado Blue Spruce,Large Spruce tree,60,20,149.99,coloradoblue.jpg,2,TRUE
+Globe Cedar,A nicely shaped cedar that grows in a natural globe shape,6,6,99.99,globecedar.jpg,1,TRUE
+Hybrid Poplar,A quick growing columnar tree,40,8,79.99,poplar.jpg,2,TRUE
+Gladiator Flowering Crab,A beautiful ornamental flowering crab able tree,18,16,89.99,gladiator.jpg,2,TRUE
+Bur Oak,"A giant of a tree, slow growing and very hardy",80,80,169.99,buroak.jpg,2,TRUE
+Norway Spruce,"Great tree for windbreaks, fast growing with graceful branches",60,30,149.99,norwayspruce.jpg,2,TRUE
+Alpine Currant,Purfect hedge for shaping and privacy,5,6,29.99,alpinecurrant.jpg,1,TRUE
+Golden Barberry,"A small shrub with very sharp thorn, great for a splash of colour or teaching your cats a lesson",2,3,29.99,goldenbarberry.jpg,1,TRUE
+Boxwood,A medium-sized hedge perfect for shearing. Please keep the topiary PG13 ,6,5,29.99,boxwood.jpg,1,TRUE

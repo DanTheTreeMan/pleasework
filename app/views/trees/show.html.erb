@@ -1,0 +1,36 @@
+<div class="content-centre"
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tree.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tree.description %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @tree.height %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @tree.width %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @tree.price %>
+</p>
+
+<p>
+  <%= link_to @tree, class: "poster" do %>
+    <%= image_tag @tree.image_url %>
+  <% end %>
+</p>
+
+<%= link_to 'Back', trees_path %>
+</div>

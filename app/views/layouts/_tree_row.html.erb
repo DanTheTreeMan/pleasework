@@ -1,0 +1,21 @@
+<%= form_for order_item, remote: true do |f| %>
+    <li class="large-3 medium-4 small-12 column radius-box">
+      <div class="tree-card padly">
+        <%= link_to tree, class: "poster" do %>
+          <%= image_tag tree.image_url %>
+        <% end %>
+        <div class="tree-info ell glassy-bg padmy padlx center-text">
+          <div class="title">
+            <h6 class="center-text"><%= tree.name %> <span>$<%= tree.price %></span></h6>
+          </div>
+          <!-- Change price to add to cart link -->
+          <p class="price label tree-label radius center-text ">
+            <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+            <%= f.hidden_field :tree_id, value: tree.id %>
+            <%= f.submit "Add to Cart" %>
+            <i class="fi-shopping-cart"></i>
+          </p>
+        </div>
+      </div>
+    </li>
+  <% end %>

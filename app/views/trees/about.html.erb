@@ -1,0 +1,12 @@
+<% about = Content.where("area = ?", "About").first %>
+<% contact = Content.where("area = ?", "Contact").first %>
+
+<div class="column content-centre pl15 pr15 ">
+  <h4 class="column center-text ptm">About GeomeTree</h4>
+  <p class="center-text pl15 pr15">
+    <%= about.body %>
+  </p>
+  <h4 class="column center-text ptm">Contact GeomeTree</h4>
+  <p class="center-text pl15 pr15"> <%= contact.body %> </p>
+<div>
+</div>

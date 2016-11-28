@@ -1,0 +1,16 @@
+<div class="column content-centre pl15 pr15 ">
+  <h4 class="column center-text ptm">About GeomeTree</h4>
+  <p class="center-text pl15 pr15">
+    Pull this from the db using the same method as resume site </br>
+    Change grey tree boxes to same colour as nav
+  </p>
+  <h1 class="center-text"> FIX YOUR CSS, YOU DOLT </h1>
+<div>
+<h4 class="column ptm">Featured Trees</h4>
+<div class="column content-centre">
+  <ul class="trees-grid no-bullet row">
+    <% @trees.each do |tree| %>
+        <%= render "layouts/tree_row", tree: tree, order_item: @order_item %>
+    <% end %>
+  </ul>
+</div>

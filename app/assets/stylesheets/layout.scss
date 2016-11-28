@@ -1,0 +1,84 @@
+// Custom layout styles
+
+// Default font family
+@font-face {
+  font-family: 'gotham-rounded';
+  src: url(gotham-rounded-medium.otf);
+}
+
+// Body background
+body {
+  background-image: url('background6.jpg') !important;
+  background-position: center;
+  color: #000;
+  li { list-style: none; }
+}
+
+.content-centre {
+  background-color: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.center-text{text-align: center !important}
+
+//.tree-card { border-radius: 7px;}
+
+// Logo
+.title-area{
+  a { padding:0 !important }
+  i {
+    font-size: 30px;
+    position: relative;
+    top: 2px;
+  }
+
+}
+
+// Topbar items
+.top-bar-section ul li { background: transparent; }
+
+// .search-area-inside {padding-right: 5px;}
+//.search-area-outside {margin-right: 0px;}
+
+// .search-button  {margin-left: 0px !important}
+
+.nav-bar a { color: #d5d5d5;}
+.nav-bar li {display: inline-block !important;}
+
+.name {padding-right: 10px;}
+
+.menu-group {float: right; padding-top: 25px;}
+li.menu-group { padding-left: 10px; padding-right: 5px;}
+
+.right {float: right;}
+
+.search-bar {float: right;}
+
+.top-bar li {float: left;}
+
+.button
+{
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 0.85em 1em;
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  background-color: #2199e8;
+  color: #fefefe;
+}
+
+// Forms
+.form-container {
+  padding: 3% 3%;
+  .switch > div {
+    position: relative;
+    top: -5px;
+  }
+}

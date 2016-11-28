@@ -1,0 +1,11 @@
+﻿Id,Name,Description,Height,Width,Price,Image url,Created at,Updated at,Image file name,Image content type,Image file size,Image updated at,Active,Image
+10,Boxwood,A medium-sized hedge perfect for shearing. Please keep the topiary PG13 ,6,5,29.99,/uploads/tree/image/10/boxwood.jpg,2016-11-28 18:48:15 UTC,2016-11-28 18:49:24 UTC,,,,,true,/uploads/tree/image/10/boxwood.jpg
+9,Golden Barberry,"A small shrub with very sharp thorn, great for a splash of colour or teaching your cats a lesson",2,3,29.99,/uploads/tree/image/9/goldenbarberry.jpg,2016-11-28 18:48:15 UTC,2016-11-28 18:54:58 UTC,,,,,true,/uploads/tree/image/9/goldenbarberry.jpg
+8,Alpine Currant,Purfect hedge for shaping and privacy,5,6,29.99,/uploads/tree/image/8/alpinecurrant.jpg,2016-11-28 18:48:15 UTC,2016-11-28 18:55:25 UTC,,,,,true,/uploads/tree/image/8/alpinecurrant.jpg
+7,Norway Spruce,"Great tree for windbreaks, fast growing with graceful branches",60,30,149.99,/uploads/tree/image/7/norwayspruce.jpg,2016-11-28 18:48:15 UTC,2016-11-28 18:55:56 UTC,,,,,true,/uploads/tree/image/7/norwayspruce.jpg
+6,Bur Oak,"A giant of a tree, slow growing and very hardy",80,80,169.99,/uploads/tree/image/6/buroak.jpg,2016-11-28 18:48:15 UTC,2016-11-28 18:56:23 UTC,,,,,true,/uploads/tree/image/6/buroak.jpg
+5,Gladiator Flowering Crab,A beautiful ornamental flowering crab able tree,18,16,89.99,/uploads/tree/image/5/gladiator.jpg,2016-11-28 18:48:15 UTC,2016-11-28 18:56:48 UTC,,,,,true,/uploads/tree/image/5/gladiator.jpg
+4,Hybrid Poplar,A quick growing columnar tree,40,8,79.99,/uploads/tree/image/4/poplar.jpg,2016-11-28 18:48:15 UTC,2016-11-28 18:59:20 UTC,,,,,true,/uploads/tree/image/4/poplar.jpg
+3,Globe Cedar,A nicely shaped cedar that grows in a natural globe shape,6,6,99.99,/uploads/tree/image/3/globecedar.jpg,2016-11-28 18:48:15 UTC,2016-11-28 18:58:31 UTC,,,,,true,/uploads/tree/image/3/globecedar.jpg
+2,Colorado Blue Spruce,Large Spruce tree,60,20,149.99,/uploads/tree/image/2/coloradoblue.jpg,2016-11-28 18:48:15 UTC,2016-11-28 18:57:58 UTC,,,,,true,/uploads/tree/image/2/coloradoblue.jpg
+1,Amur Flame Maple,Small Maple,15,15,99.99,/uploads/tree/image/1/flamemaple.jpg,2016-11-28 18:48:15 UTC,2016-11-28 18:57:12 UTC,,,,,true,/uploads/tree/image/1/flamemaple.jpg

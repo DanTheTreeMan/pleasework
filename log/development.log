@@ -28265,3 +28265,158 @@ Processing by CartsController#show as HTML
 Completed 200 OK in 2475ms (Views: 2401.3ms | ActiveRecord: 3.5ms)
 
 
+Started GET "/cart" for ::1 at 2016-11-28 10:42:38 -0600
+Processing by CartsController#show as HTML
+  [1m[36mOrder Load (7.5ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1[0m
+  Rendering carts/show.html.erb within layouts/application
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `order_items` WHERE `order_items`.`order_id` = 4[0m
+  [1m[36mOrderItem Load (1.0ms)[0m  [1m[34mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4[0m
+  [1m[36mTree Load (2.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 8 LIMIT 1[0m
+  Rendered carts/_cart_row.html.erb (39.5ms)
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 7 LIMIT 1[0m
+  Rendered carts/_cart_row.html.erb (8.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.5ms)[0m  [1m[34mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4[0m  [["order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 8 LIMIT 1[0m  [["active", true], ["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.5ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 7 LIMIT 1[0m  [["active", true], ["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4[0m  [["order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 8 LIMIT 1[0m  [["active", true], ["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 7 LIMIT 1[0m  [["active", true], ["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4[0m  [["order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 8 LIMIT 1[0m  [["active", true], ["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 7 LIMIT 1[0m  [["active", true], ["id", 7], ["LIMIT", 1]]
+  Rendered carts/_shopping_cart.html.erb (367.1ms)
+  Rendered carts/show.html.erb within layouts/application (448.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `order_items` WHERE `order_items`.`order_id` = 4[0m  [["order_id", 4]]
+  [1m[36mCACHE (0.5ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4[0m  [["order_id", 4]]
+  [1m[36mCACHE (0.5ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 8 LIMIT 1[0m  [["active", true], ["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 7 LIMIT 1[0m  [["active", true], ["id", 7], ["LIMIT", 1]]
+  Rendered layouts/_cart_text.html.erb (44.5ms)
+  Rendered layouts/_search_bar.html.erb (922.1ms)
+  Rendered layouts/_header.html.erb (1137.3ms)
+Completed 500 Internal Server Error in 2712ms (ActiveRecord: 16.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x129e1180>:0xc667110>):
+    1: 
+    2: <%= form_tag(trees_path, :method => "get", id: "search-form") do %>
+    3: <%= f.collection_select :category_id, Category.all, :id, :name, :include_blank => true %>
+    4: <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+    5: <%= submit_tag "Search" %>
+    6: <% end %>
+  
+app/views/layouts/_search_bar.html.erb:3:in `block in _app_views_layouts__search_bar_html_erb___346242417_83109912'
+app/views/layouts/_search_bar.html.erb:2:in `_app_views_layouts__search_bar_html_erb___346242417_83109912'
+app/views/layouts/_header.html.erb:32:in `_app_views_layouts__header_html_erb___981612680_105063480'
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___214949371_142219428'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (30.5ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (3440.0ms)
+Started GET "/cart" for ::1 at 2016-11-28 10:43:15 -0600
+Processing by CartsController#show as HTML
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1[0m
+  Rendering carts/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `order_items` WHERE `order_items`.`order_id` = 4[0m
+  [1m[36mOrderItem Load (1.0ms)[0m  [1m[34mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4[0m
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 8 LIMIT 1[0m
+  Rendered carts/_cart_row.html.erb (7.0ms)
+  [1m[36mTree Load (0.5ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 7 LIMIT 1[0m
+  Rendered carts/_cart_row.html.erb (9.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4[0m  [["order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 8 LIMIT 1[0m  [["active", true], ["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 7 LIMIT 1[0m  [["active", true], ["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4[0m  [["order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 8 LIMIT 1[0m  [["active", true], ["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 7 LIMIT 1[0m  [["active", true], ["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.5ms)[0m  [1m[34mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4[0m  [["order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 8 LIMIT 1[0m  [["active", true], ["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 7 LIMIT 1[0m  [["active", true], ["id", 7], ["LIMIT", 1]]
+  Rendered carts/_shopping_cart.html.erb (358.2ms)
+  Rendered carts/show.html.erb within layouts/application (425.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `order_items` WHERE `order_items`.`order_id` = 4[0m  [["order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4[0m  [["order_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 8 LIMIT 1[0m  [["active", true], ["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.5ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 7 LIMIT 1[0m  [["active", true], ["id", 7], ["LIMIT", 1]]
+  Rendered layouts/_cart_text.html.erb (46.5ms)
+  Rendered layouts/_search_bar.html.erb (2.5ms)
+  Rendered layouts/_header.html.erb (223.7ms)
+  Rendered layouts/_alerts.html.erb (1.5ms)
+Completed 200 OK in 3957ms (Views: 3848.0ms | ActiveRecord: 6.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mTree Load (1.5ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`name` = 'Amur Flame Maple' AND `trees`.`description` = 'Small Maple' AND `trees`.`height` = 15 AND `trees`.`width` = 15 AND `trees`.`price` = 99.99 AND `trees`.`image_url` = 'flamemaple.jpg' AND `trees`.`category_id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO `trees` (`name`, `description`, `height`, `width`, `price`, `image_url`, `created_at`, `updated_at`, `category_id`, `active`) VALUES ('Amur Flame Maple', 'Small Maple', 15, 15, 99.99, 'flamemaple.jpg', '2016-11-28 16:59:45', '2016-11-28 16:59:45', 2, 1)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`name` = 'Colorado Blue Spruce' AND `trees`.`description` = 'Large Spruce tree' AND `trees`.`height` = 60 AND `trees`.`width` = 20 AND `trees`.`price` = 149.99 AND `trees`.`image_url` = 'coloradoblue.jpg' AND `trees`.`category_id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `trees` (`name`, `description`, `height`, `width`, `price`, `image_url`, `created_at`, `updated_at`, `category_id`, `active`) VALUES ('Colorado Blue Spruce', 'Large Spruce tree', 60, 20, 149.99, 'coloradoblue.jpg', '2016-11-28 16:59:45', '2016-11-28 16:59:45', 2, 1)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`name` = 'Globe Cedar' AND `trees`.`description` = 'A nicely shaped cedar that grows in a natural globe shape' AND `trees`.`height` = 6 AND `trees`.`width` = 6 AND `trees`.`price` = 99.99 AND `trees`.`image_url` = 'globecedar.jpg' AND `trees`.`category_id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `trees` (`name`, `description`, `height`, `width`, `price`, `image_url`, `created_at`, `updated_at`, `category_id`, `active`) VALUES ('Globe Cedar', 'A nicely shaped cedar that grows in a natural globe shape', 6, 6, 99.99, 'globecedar.jpg', '2016-11-28 16:59:45', '2016-11-28 16:59:45', 1, 1)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`name` = 'Hybrid Poplar' AND `trees`.`description` = 'A quick growing columnar tree' AND `trees`.`height` = 40 AND `trees`.`width` = 8 AND `trees`.`price` = 79.99 AND `trees`.`image_url` = 'poplar.jpg' AND `trees`.`category_id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `trees` (`name`, `description`, `height`, `width`, `price`, `image_url`, `created_at`, `updated_at`, `category_id`, `active`) VALUES ('Hybrid Poplar', 'A quick growing columnar tree', 40, 8, 79.99, 'poplar.jpg', '2016-11-28 16:59:46', '2016-11-28 16:59:46', 2, 1)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`name` = 'Gladiator Flowering Crab' AND `trees`.`description` = 'A beautiful ornamental flowering crab able tree' AND `trees`.`height` = 18 AND `trees`.`width` = 16 AND `trees`.`price` = 89.99 AND `trees`.`image_url` = 'gladiator.jpg' AND `trees`.`category_id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `trees` (`name`, `description`, `height`, `width`, `price`, `image_url`, `created_at`, `updated_at`, `category_id`, `active`) VALUES ('Gladiator Flowering Crab', 'A beautiful ornamental flowering crab able tree', 18, 16, 89.99, 'gladiator.jpg', '2016-11-28 16:59:46', '2016-11-28 16:59:46', 2, 1)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTree Load (0.5ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`name` = 'Bur Oak' AND `trees`.`description` = 'A giant of a tree, slow growing and very hardy' AND `trees`.`height` = 80 AND `trees`.`width` = 80 AND `trees`.`price` = 169.99 AND `trees`.`image_url` = 'buroak.jpg' AND `trees`.`category_id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `trees` (`name`, `description`, `height`, `width`, `price`, `image_url`, `created_at`, `updated_at`, `category_id`, `active`) VALUES ('Bur Oak', 'A giant of a tree, slow growing and very hardy', 80, 80, 169.99, 'buroak.jpg', '2016-11-28 16:59:46', '2016-11-28 16:59:46', 2, 1)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`name` = 'Norway Spruce' AND `trees`.`description` = 'Great tree for windbreaks, fast growing with graceful branches' AND `trees`.`height` = 60 AND `trees`.`width` = 30 AND `trees`.`price` = 149.99 AND `trees`.`image_url` = 'norwayspruce.jpg' AND `trees`.`category_id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `trees` (`name`, `description`, `height`, `width`, `price`, `image_url`, `created_at`, `updated_at`, `category_id`, `active`) VALUES ('Norway Spruce', 'Great tree for windbreaks, fast growing with graceful branches', 60, 30, 149.99, 'norwayspruce.jpg', '2016-11-28 16:59:46', '2016-11-28 16:59:46', 2, 1)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`name` = 'Alpine Currant' AND `trees`.`description` = 'Purfect hedge for shaping and privacy' AND `trees`.`height` = 5 AND `trees`.`width` = 6 AND `trees`.`price` = 29.99 AND `trees`.`image_url` = 'alpinecurrant.jpg' AND `trees`.`category_id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `trees` (`name`, `description`, `height`, `width`, `price`, `image_url`, `created_at`, `updated_at`, `category_id`, `active`) VALUES ('Alpine Currant', 'Purfect hedge for shaping and privacy', 5, 6, 29.99, 'alpinecurrant.jpg', '2016-11-28 16:59:46', '2016-11-28 16:59:46', 1, 1)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`name` = 'Golden Barberry' AND `trees`.`description` = 'A small shrub with very sharp thorn, great for a splash of colour or teaching your cats a lesson' AND `trees`.`height` = 2 AND `trees`.`width` = 3 AND `trees`.`price` = 29.99 AND `trees`.`image_url` = 'goldenbarberry.jpg' AND `trees`.`category_id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `trees` (`name`, `description`, `height`, `width`, `price`, `image_url`, `created_at`, `updated_at`, `category_id`, `active`) VALUES ('Golden Barberry', 'A small shrub with very sharp thorn, great for a splash of colour or teaching your cats a lesson', 2, 3, 29.99, 'goldenbarberry.jpg', '2016-11-28 16:59:46', '2016-11-28 16:59:46', 1, 1)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`name` = 'Boxwood' AND `trees`.`description` = 'A medium-sized hedge perfect for shearing. Please keep the topiary PG13 ' AND `trees`.`height` = 6 AND `trees`.`width` = 5 AND `trees`.`price` = 29.99 AND `trees`.`image_url` = 'boxwood.jpg' AND `trees`.`category_id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `trees` (`name`, `description`, `height`, `width`, `price`, `image_url`, `created_at`, `updated_at`, `category_id`, `active`) VALUES ('Boxwood', 'A medium-sized hedge perfect for shearing. Please keep the topiary PG13 ', 6, 5, 29.99, 'boxwood.jpg', '2016-11-28 16:59:46', '2016-11-28 16:59:46', 1, 1)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[31mDELETE FROM `admin_users`[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdminUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `admin_users` WHERE `admin_users`.`email` = BINARY 'admin@example.com' LIMIT 1[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `admin_users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('admin@example.com', '$2a$11$S1ttUgfxJj89TTHBh6.4HeLhNjGz6Wj4.xOWtvh3pR9x84O3Kq6Bu', '2016-11-28 16:59:47', '2016-11-28 16:59:47')[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[31mDELETE FROM `categories`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES ('Shrub', '2016-11-28 16:59:47', '2016-11-28 16:59:47')[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES ('Tree', '2016-11-28 16:59:47', '2016-11-28 16:59:47')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[31mDELETE FROM `contents`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `contents` (`area`, `title`, `body`, `created_at`, `updated_at`) VALUES ('About', 'About Us', 'Trees', '2016-11-28 16:59:47', '2016-11-28 16:59:47')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `contents` (`area`, `title`, `body`, `created_at`, `updated_at`) VALUES ('Contact', 'Contact Us', 'CAN I HAVE YO NUMBER', '2016-11-28 16:59:47', '2016-11-28 16:59:47')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (8.5ms)[0m  [1m[31mDELETE FROM `order_statuses`[0m

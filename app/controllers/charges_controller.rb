@@ -12,7 +12,7 @@ class ChargesController < ApplicationController
       :source  => params[:stripeToken]
     )
 
-    @amount = @amount.to_i
+      @amount = @amount.to_i
 
     charge = Stripe::Charge.create(
       :customer    => customer.id,

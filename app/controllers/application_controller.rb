@@ -1,3 +1,4 @@
+# Controller for application
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_order
@@ -14,8 +15,8 @@ class ApplicationController < ActionController::Base
 
   protected
 
-    def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :address, :password, :password_confirmation) }
-      devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :address, :password, :password_confirmation, :current_password) }
-    end
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :address, :password, :password_confirmation) }
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :address, :password, :password_confirmation, :current_password) }
+  end
 end

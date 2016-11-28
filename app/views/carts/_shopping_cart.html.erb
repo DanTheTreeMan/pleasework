@@ -33,7 +33,9 @@
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-description="Complete your plant order"
             data-amount=<%= current_order.subtotal.to_f * 100%>
-            data-locale="auto">
+            data-locale="auto"
+            data-billingAddress="true"
+            data-shippingAddress="true">
     </script>
   <% end %>
 <% end %>

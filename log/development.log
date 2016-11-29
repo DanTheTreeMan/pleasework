@@ -40932,3 +40932,244 @@ Processing by Admin::OrdersController#show as HTML
 Completed 200 OK in 1344ms (Views: 1330.2ms | ActiveRecord: 5.5ms)
 
 
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('8807653943513068245', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddProvinceToUsers (20161128221059)
+  [1m[35m (343.2ms)[0m  [1m[35mALTER TABLE `users` ADD `province_id` int[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCREATE  INDEX `index_users_on_province_id`  ON `users` (`province_id`) [0m
+  [1m[35m (272.6ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_560da4bd54`
+FOREIGN KEY (`province_id`)
+  REFERENCES `provinces` (`id`)
+[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161128221059')[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8807653943513068245')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `active_admin_comments`[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'active_admin_comments'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `admin_users`[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admin_users'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `categories`[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'categories'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `contents`[0m
+  [1m[35m (1.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'contents'[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSHOW CREATE TABLE `order_items`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `order_statuses`[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'order_statuses'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `provinces`[0m
+  [1m[35m (1.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'provinces'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `trees`[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'trees'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'treestore_development'
+  AND fk.table_name = 'active_admin_comments'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'treestore_development'
+  AND fk.table_name = 'admin_users'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'treestore_development'
+  AND fk.table_name = 'categories'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'treestore_development'
+  AND fk.table_name = 'contents'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'treestore_development'
+  AND fk.table_name = 'order_items'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'treestore_development'
+  AND fk.table_name = 'order_statuses'
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'treestore_development'
+  AND fk.table_name = 'orders'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'treestore_development'
+  AND fk.table_name = 'provinces'
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'treestore_development'
+  AND fk.table_name = 'trees'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'treestore_development'
+  AND fk.table_name = 'users'
+[0m
+Started GET "/" for ::1 at 2016-11-28 22:00:35 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TreesController#index as HTML
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1[0m
+  Rendering trees/index.html.erb within layouts/application
+  [1m[36mTree Load (2.5ms)[0m  [1m[34mSELECT `trees`.* FROM `trees` WHERE `trees`.`active` = 1 ORDER BY created_at DESC[0m
+  Rendered layouts/_tree_row.html.erb (5.5ms)
+  Rendered layouts/_tree_row.html.erb (2.5ms)
+  Rendered layouts/_tree_row.html.erb (2.0ms)
+  Rendered layouts/_tree_row.html.erb (2.5ms)
+  Rendered layouts/_tree_row.html.erb (2.5ms)
+  Rendered layouts/_tree_row.html.erb (2.5ms)
+  Rendered layouts/_tree_row.html.erb (3.0ms)
+  Rendered layouts/_tree_row.html.erb (2.5ms)
+  Rendered layouts/_tree_row.html.erb (3.0ms)
+  Rendered layouts/_tree_row.html.erb (4.0ms)
+  Rendered trees/index.html.erb within layouts/application (800.5ms)
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 ORDER BY `admin_users`.`id` ASC LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `order_items` WHERE `order_items`.`order_id` = 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderItem Load (1.5ms)[0m  [1m[34mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 1[0m
+  [1m[36mTree Load (0.5ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 4 LIMIT 1[0m
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT  `trees`.* FROM `trees` WHERE `trees`.`active` = 1 AND `trees`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_cart_text.html.erb (51.5ms)
+  Rendered layouts/_search_bar.html.erb (2.5ms)
+  Rendered layouts/_header.html.erb (248.0ms)
+  Rendered layouts/_alerts.html.erb (1.5ms)
+Completed 200 OK in 3371ms (Views: 3126.7ms | ActiveRecord: 102.1ms)
+
+
+Started DELETE "/users/logout" for ::1 at 2016-11-28 22:00:45 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"m+acLwWsSHo+OV1TogcuMqTDuXLZIUVdDxxESPB0n8SxGs4aQEyC0THDoDA10LYgv50rM28tSaCXamFRuXIitQ=="}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 ORDER BY `admin_users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 22:00:45 -0600
+Processing by TreesController#index as HTML
+  Rendering trees/index.html.erb within layouts/application
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT `trees`.* FROM `trees` WHERE `trees`.`active` = 1 ORDER BY created_at DESC[0m
+  Rendered layouts/_tree_row.html.erb (5.0ms)
+  Rendered layouts/_tree_row.html.erb (2.0ms)
+  Rendered layouts/_tree_row.html.erb (2.6ms)
+  Rendered layouts/_tree_row.html.erb (3.0ms)
+  Rendered layouts/_tree_row.html.erb (2.5ms)
+  Rendered layouts/_tree_row.html.erb (2.5ms)
+  Rendered layouts/_tree_row.html.erb (2.5ms)
+  Rendered layouts/_tree_row.html.erb (2.5ms)
+  Rendered layouts/_tree_row.html.erb (3.5ms)
+  Rendered layouts/_tree_row.html.erb (3.5ms)
+  Rendered trees/index.html.erb within layouts/application (762.1ms)
+  Rendered layouts/_cart_text.html.erb (5.0ms)
+  Rendered layouts/_search_bar.html.erb (2.5ms)
+  Rendered layouts/_header.html.erb (144.1ms)
+  Rendered layouts/_alerts.html.erb (1.5ms)
+Completed 200 OK in 3310ms (Views: 3239.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/register" for ::1 at 2016-11-28 22:01:01 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT `provinces`.* FROM `provinces`[0m
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (147.2ms)
+  Rendered layouts/_cart_text.html.erb (5.0ms)
+  Rendered layouts/_search_bar.html.erb (2.0ms)
+  Rendered layouts/_header.html.erb (139.9ms)
+  Rendered layouts/_alerts.html.erb (1.5ms)
+Completed 200 OK in 3052ms (Views: 2965.8ms | ActiveRecord: 53.5ms)
+
+
+Started POST "/users" for ::1 at 2016-11-28 22:11:13 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YY9dgMgJ0SS9zhZav55qXSW+12EIT64Y5qTfeEcndJQkVx8wO6e5imlRPyW7Qt49JzlcfQ8M3bjq9VMlu5leoQ==", "user"=>{"name"=>"Daniel Chuck", "email"=>"Testing@gmail.com", "address"=>"42 Someplace Ave", "id"=>"1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+Unpermitted parameter: id
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'testing@gmail.com' LIMIT 1[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'testing@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`, `address`) VALUES ('testing@gmail.com', '$2a$11$qPy9GeD1qoEJ53P.oeJLWOvjZp1R4SElm237mfdnCSNT5.8G3aXbG', '2016-11-29 04:11:14', '2016-11-29 04:11:14', 'Daniel Chuck', '42 Someplace Ave')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2016-11-29 04:11:14', `last_sign_in_at` = '2016-11-29 04:11:14', `current_sign_in_ip` = '::1', `last_sign_in_ip` = '::1' WHERE `users`.`id` = 9[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1985ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 22:11:15 -0600
+Processing by TreesController#index as HTML
+  Rendering trees/index.html.erb within layouts/application
+  [1m[36mTree Load (1.0ms)[0m  [1m[34mSELECT `trees`.* FROM `trees` WHERE `trees`.`active` = 1 ORDER BY created_at DESC[0m
+  Rendered layouts/_tree_row.html.erb (4.0ms)
+  Rendered layouts/_tree_row.html.erb (2.0ms)
+  Rendered layouts/_tree_row.html.erb (1.5ms)
+  Rendered layouts/_tree_row.html.erb (3.5ms)
+  Rendered layouts/_tree_row.html.erb (3.0ms)
+  Rendered layouts/_tree_row.html.erb (3.5ms)
+  Rendered layouts/_tree_row.html.erb (3.5ms)
+  Rendered layouts/_tree_row.html.erb (2.0ms)
+  Rendered layouts/_tree_row.html.erb (3.0ms)
+  Rendered layouts/_tree_row.html.erb (3.0ms)
+  Rendered trees/index.html.erb within layouts/application (779.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_cart_text.html.erb (7.0ms)
+  Rendered layouts/_search_bar.html.erb (3.5ms)
+  Rendered layouts/_header.html.erb (214.6ms)
+  Rendered layouts/_alerts.html.erb (2.0ms)
+Completed 200 OK in 3951ms (Views: 3847.4ms | ActiveRecord: 2.0ms)
+
+

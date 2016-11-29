@@ -10,6 +10,10 @@
 
     <div class="mb1"><%= f.text_field :address, placeholder: "Address", class: "radius" %></div>
 
+    <div class="mb1">
+      <%= f.collection_select :id, Province.all, :id, :province_code , {:selected => 1} %>
+    </div>
+
     <div class="mb1"><%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "radius" %></div>
 
     <div class="mb1"><%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm password", class: "radius" %></div>

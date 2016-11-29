@@ -1,8 +1,6 @@
-ActiveAdmin.register User do
+ActiveAdmin.register Order do
 
-
-
-
+permit_params :subtotal, :tax, :shipping, :total, :order_status_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -15,12 +13,6 @@ ActiveAdmin.register User do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-  def update
-    if params[:user][:password].blank?
-      params[:user].delete("password")
-      params[:user].delete("password_confirmation")
-    end
-    super
-  end
+
 
 end

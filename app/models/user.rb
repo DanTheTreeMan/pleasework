@@ -1,6 +1,5 @@
 # Model for creating new users
 class User < ApplicationRecord
-  belongs_to :province
   # Name Validation
   validates :name, presence: true
 

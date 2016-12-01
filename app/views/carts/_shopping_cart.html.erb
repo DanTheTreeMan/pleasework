@@ -15,7 +15,18 @@
   <% @order_items.each do |order_item| %>
     <%= render 'carts/cart_row', product: order_item.tree, order_item: order_item, show_total: true %>
   <% end %>
-  <h4 class="text-right">Total Price: <span style="color: green"><%= number_to_currency current_order.subtotal %></span></h4>
+  <h4 class="text-right content-centre">
+    Total Price: <span style="color: green"><%= number_to_currency current_order.subtotal %></span>
+    <%if signed_in?%>
+      <p>Hide this line, use tax rate to calculate total, pass total to Stripe
+        <%= current_user.province_id %>
+        <% province = Province.where("id = ?", "#{current_user.province_id}").first%>
+        <% total_cost = current_order.subtotal * (1 + province.tax_rate) %>
+      </p>
+    <%else%>
+      <p>TESTING</p>
+    <%end%>
+
   <%= form_tag charges_path do %>
     <article>
       <% if flash[:error].present? %>
@@ -24,8 +35,8 @@
         </div>
       <% end %>
       <label class="amount">
-        <span>Amount: $5.00</span>
-        <%= hidden_field_tag 'amount', current_order.subtotal.to_f * 10%>
+        <span>Amount: $<%= total_cost %></span>
+        <%= hidden_field_tag 'amount', total_cost.to_f * 10%>
       </label>
     </article>
 
@@ -38,4 +49,5 @@
             data-shippingAddress="true">
     </script>
   <% end %>
+  </h4>
 <% end %>
